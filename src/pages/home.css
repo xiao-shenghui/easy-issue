@@ -1,0 +1,141 @@
+.layout {
+    width: 100%;
+    border: 1px solid #d7dde4;
+    background: #f5f7f9;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.layout-logo {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 0px;
+}
+
+
+.layout-nav {
+    width: 420px;
+    margin: 0 auto;
+    margin-right: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+}
+
+.layout-nav li {
+    height: 100%;
+}
+
+.layout-nav img {
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.ivu-layout-header,
+.ivu-menu {
+    background-color: #333;
+}
+
+.ivu-menu-item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout-footer-center {
+    text-align: center;
+}
+
+.layout-topMiddleBottom .ivu-menu-light {
+    background: none;
+    color: #fff
+}
+
+
+.ivu-input-number-controls-outside {
+    width: 100px;
+}
+
+.v-note-wrapper {
+    z-index: 999;
+}
+
+.ivu-tag {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ivu-tag:hover {
+    box-shadow: 0 0 .1667rem rgba(45, 139, 240, 0.37);
+}
+
+.ivu-tag-select {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.ivu-tag-select-option {
+    color: red;
+}
+
+.themeGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.themeGroup label {
+    margin: 3px 0;
+    padding: 20px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.themeOption {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: #969696 !important;
+    color: #fff !important;
+    font-weight: 900;
+    padding: 0 !important;
+}
+
+.configBtn {
+    display: flex;
+    flex-direction: column;
+    width: 13.3333rem;
+}
+
+.configBtn .ivu-btn {
+    margin: 3px 0;
+}
+
+.markdown-body {
+    height: 100vh;
+}
+
+.ivu-drawer {
+    z-index: 2000 !important;
+}
+
+.ivu-drawer-wrap {
+    z-index: 1700 !important;
+}
+
+.ivu-drawer-mask {
+    z-index: 1600 !important;
+}
+
+.ivu-select-dropdown {
+    z-index: 2000 !important;
+}
