@@ -9,7 +9,7 @@ import ETag from '../components/ETag.vue';
 import EDrawerAll from '../components/EDrawerAll.vue';
 import EDrawerTem from '../components/EDrawerTem.vue';
 import EDrawerTheme from '../components/EDrawerTheme.vue';
-import { ref, watch } from 'vue'
+import { reactive, ref, watch } from 'vue'
 import useIssue from '../store/issue';
 // 模板列表
 import bugsOnly from '../assets/issueTem/bugs-only'
@@ -66,6 +66,15 @@ watch(() => config.tem.val, (newValue) => {
             break;
     }
 })
+const color = ref('rgba(25, 190,107, 1)')
+const style = reactive({
+    color: color.value
+})
+watch(color, (newValue) => {
+    style.color = newValue;
+})
+const toolBg = ref('#fff');
+
 </script>
 
 <template>
@@ -84,8 +93,12 @@ watch(() => config.tem.val, (newValue) => {
                 <!-- 抽屉3 -->
                 <EDrawerTheme />
             </Card>
-            <mavon-editor :language="config.detail.language" :fontSize="config.detail.fontSize + 'px'"
-                v-model="mavonvalue"></mavon-editor>
+            <mavon-editor :language="config.detail.language" :fontSize="config.detail.fontSize + 'px'" v-model="mavonvalue"
+                :toolbarsBackground="toolBg" :style="style">
+                <template #left-toolbar-before>
+                    <ColorPicker v-model="color" alpha size="small" />
+                </template>
+            </mavon-editor>
         </Content>
         <Footer class="layout-footer-center">Designed by @xiao-shenghui</Footer>
     </Layout>

@@ -139,3 +139,17 @@
 .ivu-select-dropdown {
     z-index: 2000 !important;
 }
+
+.btn-Color {
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border: none;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-Color:hover {
+    background-color: #e9e9eb;
+}

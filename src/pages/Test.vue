@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { saveAs } from 'file-saver'
-import HelloWorld from '../components/HelloWorld.vue'
 import { ref } from 'vue'
 const count = ref('我是Home页')
 // 保存文件的方法
@@ -11,7 +10,6 @@ const handleSave = function () {
 </script>
 
 <template>
-    <HelloWorld msg="Vite" />
 
     <div class="card">
         {{ count }}
